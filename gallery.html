@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/style-rtl.css">
     </head>
-    <body class="gray-bg bg-2 ar-font">
+    <body class="gray-bg bg-2 ar-font" dir="rtl">
         <div class="binduz-er-news-off_canvars_overlay"></div>
         <!--Start Navbar-->
         <div class="binduz-er-news-offcanvas_menu">
@@ -41,7 +41,7 @@
                                     <li><a href="#">Skype</a></li>
                                 </ul>
                             </div>
-                            <div id="menu" class="text-left">
+                            <div id="menu" class="text-right">
                                 <ul class="binduz-er-news-offcanvas_main_menu">
                                     <li class="binduz-er-news-menu-item-has-children">
                                         <a class="nav-link" href="index.html">الرئيسية</a>
@@ -58,14 +58,14 @@
                                     <li class="binduz-er-news-menu-item-has-children">
                                         <a class="nav-link" href="activities.html">أنشطتنا</a>
                                     </li>
-                                    <li class="binduz-er-news-menu-item-has-children  binduz-er-news-active">
+                                    <li class="binduz-er-news-menu-item-has-children binduz-er-news-active">
                                         <a class="nav-link" href="gallery.html">المعرض</a>
                                     </li>
                                     <li class="binduz-er-news-menu-item-has-children">
                                         <a class="nav-link" href="our-team.html">فريق العمل</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="join-us.html">انضم لنا</a>
+                                    <li class="binduz-er-news-menu-item-has-children">
+                                        <a class="nav-link" href="join-us.html">انضم الينا</a>
                                     </li>
                                 </ul>
                             </div>
@@ -86,12 +86,12 @@
                 <div class="container mt-60">
                     <div class="row">
                         <div class="col-6">
-                            <img src="assets/images/logo.png" alt=""> 
-                        </div>
-                        <div class="col-6">
                         <div class="binduz-er-news-search-close float-end">
                             <button class="binduz-er-news-search-close-btn ar-font">أغلاق <span></span><span></span></button>
                         </div> 
+                        </div>
+                        <div class="col-6">
+                            <img src="assets/images/logo.png" alt=""> 
                         </div>
                     </div> 
                 </div> 
@@ -102,8 +102,8 @@
                         <div class="col-lg-12">
                         <div class="binduz-er-news-search-form">
                             <form action="#">
-                                <input type="text" placeholder="ابحث عن مقال" class="ar-font">
                                 <button><i class="fa fa-search"></i></button>
+                                <input type="text" placeholder="ابحث عن مقال" class="ar-font">
                             </form>
                         </div>
                         </div>
@@ -115,13 +115,22 @@
             <div class="binduz-er-header-nav">
                 <div class=" container-fluid p-0">
                     <div class="row">
-                        <div class=" col-lg-12">
+                        <div class=" col-lg-12 px-5 py-2">
                             <div class="navigation">
                                 <nav class="navbar navbar-expand-lg navbar-light">
-                                    <div class="navbar-brand logo"><a href="index.html"><img src="assets/images/logo2.png" alt=""></a></div> 
+                                    <div class="binduz-er-navbar-btn d-flex">
+                                        <button class="navbar-toggler binduz-er-news-canvas_open" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                            <span class="navbar-toggler-icon"></span>
+                                        </button>
+                                        <div class="binduz-er-widget d-flex  mr-10">
+                                            <a class="binduz-er-news-search-open"  href="#">
+                                                <i class="far fa-search" id="search-switch"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                     <div class="collapse navbar-collapse justify-content-lg-center" id="navbarSupportedContent">
                                         <ul class="navbar-nav mr-auto">
-                                            <li class="nav-item ">
+                                            <li class="nav-item">
                                                 <a class="nav-link" href="index.html">الرئيسية</a>
                                             </li>
                                             <li class="nav-item">
@@ -137,7 +146,7 @@
                                                 <a class="nav-link" href="activities.html">أنشطتنا</a>
                                             </li>
                                             <li class="nav-item active">
-                                                <a class="nav-link active" href="gallery.html">المعرض</a>
+                                                <a class="nav-link" href="gallery.html">المعرض</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="our-team.html">فريق العمل</a>
@@ -147,16 +156,7 @@
                                             </li>
                                         </ul>
                                     </div> 
-                                    <div class="binduz-er-navbar-btn d-flex">
-                                        <div class="binduz-er-widget d-flex">
-                                            <a class="binduz-er-news-search-open"  href="#">
-                                                <i class="far fa-search" id="search-switch"></i>
-                                            </a>
-                                        </div>
-                                        <button class="navbar-toggler binduz-er-news-canvas_open" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                            <span class="navbar-toggler-icon"></span>
-                                        </button>
-                                    </div>
+                                    <div class="navbar-brand logo"><a href="index.html"><img src="assets/images/logo2.png" alt=""></a></div> 
                                 </nav>
                             </div> 
                         </div>
@@ -166,191 +166,174 @@
         </header>
         <!--End Navbar-->
         
+        <!--Start News Slider-->
         <section class="binduz-er-news-slider-2-area pt-50">
-            <div class=" container-fluid p-0">
+            <div class="container p-0">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="binduz-er-news-slider-2-item">
-                            <div class="binduz-er-news-viewed-most">
+                        <h2 class="col-12 text-center mb-40">
+                            معرض الصور
+                        </h2>
+                        <div class="binduz-er-news-slider-2-item col-lg-4 mb-10">
+                            <div class="binduz-er-news-viewed-most ">
                                 <div class="binduz-er-thumb">
                                     <img src="assets/images/حفل ختام.jpg" alt="">
                                 </div>
                                 <div class="binduz-er-content">
                                     <div class="binduz-er-meta-item">
                                         <div class="binduz-er-meta-categories">
-                                            <a href="activities.html">انشطتنا</a>
+                                            <a href="activities.html">أنشطتنا</a>
                                         </div>
                                         <div class="binduz-er-meta-date">
-                                            <span><i class="fal fa-calendar-alt"></i> 2020 <bdi>فبراير</bdi> 24</span>
+                                            <span>
+                                                <i class="fal fa-calendar-alt"></i>  24 فبراير 2020
+                                            </span>
                                         </div>
                                     </div>
-                                    <h4 class="binduz-er-title">
-                                        <a href="activities.html" class="h2 pt-1">حفل الختام ال15</a>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="binduz-er-news-viewed-most">
-                                <div class="binduz-er-thumb">
-                                    <img src="assets/images/حفل ختام.jpg" alt="">
-                                </div>
-                                <div class="binduz-er-content">
-                                    <div class="binduz-er-meta-item">
-                                        <div class="binduz-er-meta-categories">
-                                            <a href="activities.html">انشطتنا</a>
-                                        </div>
-                                        <div class="binduz-er-meta-date">
-                                            <span><i class="fal fa-calendar-alt"></i> 2020 <bdi>فبراير</bdi> 24</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="binduz-er-title">
-                                        <a href="activities.html" class="h2 pt-1">حفل الختام ال15</a>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="binduz-er-news-viewed-most">
-                                <div class="binduz-er-thumb">
-                                    <img src="assets/images/حفل ختام.jpg" alt="">
-                                </div>
-                                <div class="binduz-er-content">
-                                    <div class="binduz-er-meta-item">
-                                        <div class="binduz-er-meta-categories">
-                                            <a href="activities.html">انشطتنا</a>
-                                        </div>
-                                        <div class="binduz-er-meta-date">
-                                            <span><i class="fal fa-calendar-alt"></i> 2020 <bdi>فبراير</bdi> 24</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="binduz-er-title">
-                                        <a href="activities.html" class="h2 pt-1">حفل الختام ال15</a>
+                                    <h4 class="binduz-er-title ar-font">
+                                        <a href="#">حفل ختام ال15</a>
                                     </h4>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-            
-        <section class="binduz-er-about-us-area pb-60">
-            <div class=" container">
-                <div class="binduz-er-author-user-area">
-                    <div class=" container">
-                            <div class="row ar-font">
-                                <div class=" col-lg-3 col-md-6">
-                                    <div class="binduz-er-about-us-box">
-                                        <div class="binduz-er-icon">
-                                            <img src="assets/images/حفل ختام.jpg" alt="">
-                                        </div>
-                                        <h4 class="binduz-er-title">العنوان</h4>
-                                        <p>
-                                            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور
-                                        </p>
-                                    </div>
+                        <div class="binduz-er-news-slider-2-item col-lg-4 mb-10">
+                            <div class="binduz-er-news-viewed-most ">
+                                <div class="binduz-er-thumb">
+                                    <img src="assets/images/حفل ختام.jpg" alt="">
                                 </div>
-                                <div class=" col-lg-3 col-md-6">
-                                    <div class="binduz-er-about-us-box">
-                                        <div class="binduz-er-icon">
-                                            <img src="assets/images/حفل ختام.jpg" alt="">
+                                <div class="binduz-er-content">
+                                    <div class="binduz-er-meta-item">
+                                        <div class="binduz-er-meta-categories">
+                                            <a href="activities.html">أنشطتنا</a>
                                         </div>
-                                        <h4 class="binduz-er-title">العنوان</h4>
-                                        <p>
-                                            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class=" col-lg-3 col-md-6">
-                                    <div class="binduz-er-about-us-box">
-                                        <div class="binduz-er-icon">
-                                            <img src="assets/images/حفل ختام.jpg" alt="">
+                                        <div class="binduz-er-meta-date">
+                                            <span>
+                                                <i class="fal fa-calendar-alt"></i>  24 فبراير 2020
+                                            </span>
                                         </div>
-                                        <h4 class="binduz-er-title">العنوان</h4>
-                                        <p>
-                                            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور
-                                        </p>
                                     </div>
+                                    <h4 class="binduz-er-title ar-font">
+                                        <a href="#">حفل ختام ال15</a>
+                                    </h4>
                                 </div>
-                                <div class=" col-lg-3 col-md-6">
-                                    <div class="binduz-er-about-us-box">
-                                        <div class="binduz-er-icon">
-                                            <img src="assets/images/حفل ختام.jpg" alt="">
-                                        </div>
-                                        <h4 class="binduz-er-title">العنوان</h4>
-                                        <p>
-                                            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class=" col-lg-3 col-md-6">
-                                    <div class="binduz-er-about-us-box">
-                                        <div class="binduz-er-icon">
-                                            <img src="assets/images/حفل ختام.jpg" alt="">
-                                        </div>
-                                        <h4 class="binduz-er-title">العنوان</h4>
-                                        <p>
-                                            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class=" col-lg-3 col-md-6">
-                                    <div class="binduz-er-about-us-box">
-                                        <div class="binduz-er-icon">
-                                            <img src="assets/images/حفل ختام.jpg" alt="">
-                                        </div>
-                                        <h4 class="binduz-er-title">العنوان</h4>
-                                        <p>
-                                            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class=" col-lg-3 col-md-6">
-                                    <div class="binduz-er-about-us-box">
-                                        <div class="binduz-er-icon">
-                                            <img src="assets/images/حفل ختام.jpg" alt="">
-                                        </div>
-                                        <h4 class="binduz-er-title">العنوان</h4>
-                                        <p>
-                                            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class=" col-lg-3 col-md-6">
-                                    <div class="binduz-er-about-us-box">
-                                        <div class="binduz-er-icon">
-                                            <img src="assets/images/حفل ختام.jpg" alt="">
-                                        </div>
-                                        <h4 class="binduz-er-title">العنوان</h4>
-                                        <p>
-                                            لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه ... بروشور
-                                        </p>
-                                    </div>
-                                </div>
-                                
                             </div>
+                        </div>
+                        <div class="binduz-er-news-slider-2-item col-lg-4 mb-10">
+                            <div class="binduz-er-news-viewed-most ">
+                                <div class="binduz-er-thumb">
+                                    <img src="assets/images/حفل ختام.jpg" alt="">
+                                </div>
+                                <div class="binduz-er-content">
+                                    <div class="binduz-er-meta-item">
+                                        <div class="binduz-er-meta-categories">
+                                            <a href="activities.html">أنشطتنا</a>
+                                        </div>
+                                        <div class="binduz-er-meta-date">
+                                            <span>
+                                                <i class="fal fa-calendar-alt"></i>  24 فبراير 2020
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h4 class="binduz-er-title ar-font">
+                                        <a href="#">حفل ختام ال15</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="binduz-er-news-slider-2-item col-lg-4 mb-10">
+                            <div class="binduz-er-news-viewed-most ">
+                                <div class="binduz-er-thumb">
+                                    <img src="assets/images/حفل ختام.jpg" alt="">
+                                </div>
+                                <div class="binduz-er-content">
+                                    <div class="binduz-er-meta-item">
+                                        <div class="binduz-er-meta-categories">
+                                            <a href="activities.html">أنشطتنا</a>
+                                        </div>
+                                        <div class="binduz-er-meta-date">
+                                            <span>
+                                                <i class="fal fa-calendar-alt"></i>  24 فبراير 2020
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h4 class="binduz-er-title ar-font">
+                                        <a href="#">حفل ختام ال15</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="binduz-er-news-slider-2-item col-lg-4 mb-10">
+                            <div class="binduz-er-news-viewed-most ">
+                                <div class="binduz-er-thumb">
+                                    <img src="assets/images/حفل ختام.jpg" alt="">
+                                </div>
+                                <div class="binduz-er-content">
+                                    <div class="binduz-er-meta-item">
+                                        <div class="binduz-er-meta-categories">
+                                            <a href="activities.html">أنشطتنا</a>
+                                        </div>
+                                        <div class="binduz-er-meta-date">
+                                            <span>
+                                                <i class="fal fa-calendar-alt"></i>  24 فبراير 2020
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h4 class="binduz-er-title ar-font">
+                                        <a href="#">حفل ختام ال15</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="binduz-er-news-slider-2-item col-lg-4 mb-10">
+                            <div class="binduz-er-news-viewed-most ">
+                                <div class="binduz-er-thumb">
+                                    <img src="assets/images/حفل ختام.jpg" alt="">
+                                </div>
+                                <div class="binduz-er-content">
+                                    <div class="binduz-er-meta-item">
+                                        <div class="binduz-er-meta-categories">
+                                            <a href="activities.html">أنشطتنا</a>
+                                        </div>
+                                        <div class="binduz-er-meta-date">
+                                            <span>
+                                                <i class="fal fa-calendar-alt"></i>  24 فبراير 2020
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h4 class="binduz-er-title ar-font">
+                                        <a href="#">حفل ختام ال15</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="col-12 text-center mb-40">
+                        </h2>
                     </div>
                 </div>
             </div>
         </section>
+        <!--End News Slider-->
 
         <!--Start Footer-->
-        <footer class="binduz-er-footer-copyright-area">
+        <footer class="binduz-er-footer-copyright-area mt-10">
             <div class=" container">
                 <div class="row align-items-center justify-content-lg-center">
-                    <div class="binduz-er-footer-logo col-lg-7 col-md-10">
+                    <div class="binduz-er-footer-logo col-lg-2 col-md-4 col-6">
                         <a href="index.html">
-                            <img src="assets/images/logo.png" alt="">
+                            <img src="assets/images/logo2.png" alt="">
                         </a>
                     </div>
-                    <div class="col-lg-8 mt-10">
-                        <div class="binduz-er-copyright-text">
-                            <p class="text-center">Copyright Mirage - 2021</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
+                    <div class="col-8"></div>
+                    <div class="col-lg-8">
                         <div class="binduz-er-copyright-menu float-lg-end float-none">
                             <ul class="ar-font text-center">
-                                <li><a href="about-us.html" class="h5">عن علشانك يا بلدي</a></li>
                                 <li><a href="our-team.html" class="h5">الفريق</a></li>
+                                <li><a href="about-us.html" class="h5">عن علشانك يا بلدي</a></li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-10">
+                        <div class="binduz-er-copyright-text">
+                            <p class="text-center">Copyright Mirage - 2021</p>
                         </div>
                     </div>
                 </div>
@@ -359,7 +342,7 @@
 
 
         <div class="binduz-er-back-to-top ar-font">
-            <p class="h5">اذهب لأعلى الصفحة <i class="fal fa-long-arrow-right"></i></p>
+            <p>  <i class="fal fa-long-arrow-right"></i>اذهب لأعلى الصفحة</p>
         </div>
 
 
